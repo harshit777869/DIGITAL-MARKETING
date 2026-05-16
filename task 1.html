@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Social Media Calendar</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:600px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin:10px;padding:10px;border-radius:8px;text-align:left;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>30-Day Social Media Calendar</h2>
+
+<button onclick="generate()">Generate Plan</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+let captions = [
+"Day 1: Launch Post 🚀 #brand",
+"Day 2: Behind the scenes 🎥 #teamwork",
+"Day 3: Product highlight ⭐ #quality",
+"Day 4: Customer review 💬 #trust",
+"Day 5: Tips & Tricks 💡 #learn"
+];
+
+function generate(){
+
+    out.innerHTML = "";
+
+    for(let i=1;i<=30;i++){
+        let cap = captions[i % captions.length];
+
+        out.innerHTML += `
+        <div class="card">
+        <b>Day ${i}</b><br>
+        ${cap}<br>
+        📸 Image Idea: Creative branding post
+        </div>`;
+    }
+}
+</script>
+
+</body>
+</html>

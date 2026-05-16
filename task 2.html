@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Content Strategy</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin:10px;padding:10px;border-radius:8px;text-align:left;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Content Marketing Strategy</h2>
+
+<button onclick="show()">Generate Strategy</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function show(){
+
+    let strategy = [
+        "🎯 Target Audience: Students & Professionals",
+        "📝 Blog Topics: SEO, Marketing Tips, Branding",
+        "📢 Channels: Instagram, LinkedIn, YouTube",
+        "📈 Goal: Increase Engagement & Traffic",
+        "💡 Focus: Organic Growth Strategy"
+    ];
+
+    out.innerHTML = "";
+
+    strategy.forEach(s=>{
+        out.innerHTML += `<div class="card">${s}</div>`;
+    });
+}
+</script>
+
+</body>
+</html>

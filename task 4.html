@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Brand Reputation</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#ff4444;color:white;border:none;}
+.card{background:#2d2d2d;margin:10px;padding:10px;border-radius:8px;text-align:left;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Brand Reputation Management</h2>
+
+<button onclick="manage()">Check Reputation</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function manage(){
+
+    let reviews = [
+        "⭐ Positive Review: Great service!",
+        "⭐ Positive Review: Loved the product",
+        "⚠ Negative Review: Delivery delay",
+        "⭐ Positive Review: Excellent support",
+        "⚠ Negative Review: Poor packaging"
+    ];
+
+    let positive = 0;
+    let negative = 0;
+
+    reviews.forEach(r=>{
+        if(r.includes("Positive")) positive++;
+        else negative++;
+    });
+
+    out.innerHTML = `
+    <div class="card">Positive Reviews: ${positive}</div>
+    <div class="card">Negative Reviews: ${negative}</div>
+    <div class="card">Strategy: Improve delivery & packaging 🚀</div>
+    `;
+}
+</script>
+
+</body>
+</html>

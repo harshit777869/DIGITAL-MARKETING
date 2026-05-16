@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SEO Strategy</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:500px;margin:auto;margin-top:40px;background:#1e1e1e;padding:20px;border-radius:10px;}
+button{padding:10px;background:#00ff99;border:none;}
+.card{background:#2d2d2d;margin:10px;padding:10px;border-radius:8px;text-align:left;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>SEO Strategy Planner</h2>
+
+<button onclick="seo()">Generate SEO Plan</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function seo(){
+
+    let data = [
+        "🔑 Keywords: Digital Marketing, SEO Tools, Branding",
+        "🔗 Backlinks: Guest Posts, Forums, Blogs",
+        "⚙ Technical SEO: Speed Optimization, Mobile Friendly",
+        "📊 Content SEO: Blog Articles + Keywords",
+        "📈 Goal: Rank on Google Top Page"
+    ];
+
+    out.innerHTML = "";
+
+    data.forEach(d=>{
+        out.innerHTML += `<div class="card">${d}</div>`;
+    });
+}
+</script>
+
+</body>
+</html>
